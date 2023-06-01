@@ -9,8 +9,8 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - test //... --config=linux-workflows --test_tag_filters=-performance,-webdriver,-docker --build_metadata=TAGS=linux-workflow
-      - test //server/util/lru/... --config=linux-workflows
+      - test //... --config=linux-workflows --test_tag_filters=-performance,-webdriver,-docker --build_metadata=TAGS=linux-workflow --test_output=errors
+      - test //server/util/lru/... --config=linux-workflows --test_output=errors
 
 plugins:
   - path: cli/plugins/go-deps
