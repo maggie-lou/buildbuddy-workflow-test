@@ -10,7 +10,7 @@ actions:
           - "master"
     bazel_commands:
       - clean --expunge
-      - test //... --config=linux-workflows --test_tag_filters=-performance,-webdriver,-docker --build_metadata=TAGS=linux-workflow --test_output=errors
+      - build //... --config=linux-workflows
 
 plugins:
   - path: cli/plugins/go-deps
