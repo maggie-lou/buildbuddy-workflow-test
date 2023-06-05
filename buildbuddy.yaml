@@ -9,8 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - echo $PATH
-      - source $HOME/.profile.
+      - echo \"$PATH\"
       - go version
       - go mod download
 
