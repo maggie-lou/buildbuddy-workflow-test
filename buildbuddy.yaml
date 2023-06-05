@@ -1,6 +1,5 @@
 actions:
   - name: Test
-    force_expunge: true
     container_image: ubuntu-20.04
     triggers:
       push:
@@ -10,7 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - test //... --config=linux-workflows --test_tag_filters=-performance,-webdriver,-docker --build_metadata=TAGS=linux-workflow
+      - maggie
 
 plugins:
   - path: cli/plugins/go-deps
