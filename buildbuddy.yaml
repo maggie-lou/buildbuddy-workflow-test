@@ -1,5 +1,5 @@
 actions:
-  - name: maggie
+  - name: Test
     container_image: ubuntu-20.04
     triggers:
       push:
@@ -9,10 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - env
-      - PATH="$PATH:/usr/local/go/bin"
-      - go version
-      - go mod download
+      - run :maggie
 
 plugins:
   - path: cli/plugins/go-deps

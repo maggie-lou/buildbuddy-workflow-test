@@ -219,3 +219,5 @@ toolchain(
     toolchain = ":bash_rbe_ubuntu1604",
     toolchain_type = "@bazel_tools//tools/sh:toolchain_type",
 )
+
+sh_binary(name = "maggie", srcs = ["maggie.sh"])
