@@ -9,6 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
+      - ls /usr/local/go/bin
       - env
       - go version
       - go mod download
