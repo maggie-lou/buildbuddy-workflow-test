@@ -1,5 +1,5 @@
 actions:
-  - name: Test
+  - name: maggie
     container_image: ubuntu-20.04
     triggers:
       push:
@@ -9,7 +9,8 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - maggie
+      - ls /root/workspace
+      - /root/workspace/go mod download
 
 plugins:
   - path: cli/plugins/go-deps
