@@ -9,8 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - ls /root/workspace
-      - /root/workspace/go mod download
+      - /usr/local/go mod download
 
 plugins:
   - path: cli/plugins/go-deps
