@@ -9,8 +9,10 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - ls /usr/local
-      - /usr/local/go mod download
+      - echo $PATH
+      - source $HOME/.profile.
+      - go version
+      - go mod download
 
 plugins:
   - path: cli/plugins/go-deps
