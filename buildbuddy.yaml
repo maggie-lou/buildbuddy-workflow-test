@@ -10,7 +10,7 @@ actions:
           - "master"
     bazel_commands:
       - env
-      - export PATH="$PATH:/usr/local/go/bin"
+      - PATH="$PATH:/usr/local/go/bin"
       - go version
       - go mod download
 
