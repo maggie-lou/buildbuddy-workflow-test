@@ -10,8 +10,9 @@ actions:
           - "master"
     bazel_commands:
       - /usr/local/go/bin/go env
+      - ls /root/workspace/.home/go/pkg/mod
       - /usr/local/go/bin/go mod download
-      - ls
+      - ls /root/workspace/.home/go/pkg/mod
     env:
       PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
 
