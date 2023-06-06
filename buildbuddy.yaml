@@ -11,7 +11,8 @@ actions:
     bazel_commands:
       - pwd
       - /usr/local/go/bin/go mod download
-      - ls /usr/local/go/bin/go
+      - cd /usr/local/go/bin/go
+      - ls
     env:
       PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
 
