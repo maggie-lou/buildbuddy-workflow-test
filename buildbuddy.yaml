@@ -9,7 +9,7 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - pwd
+      - /usr/local/go/bin/go env
       - /usr/local/go/bin/go mod download
       - ls
     env:
