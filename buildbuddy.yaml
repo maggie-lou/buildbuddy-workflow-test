@@ -12,6 +12,7 @@ actions:
       - /usr/local/go/bin/go env
       - ls /root/workspace/.home/go/pkg/mod
       - /usr/local/go/bin/go clean -modcache
+      - ls /root/workspace/.home/go/pkg/mod
       - /usr/local/go/bin/go mod download
       - ls /root/workspace/.home/go/pkg/mod
     env:
