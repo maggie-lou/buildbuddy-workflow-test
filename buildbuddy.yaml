@@ -9,10 +9,9 @@ actions:
         branches:
           - "master"
     bazel_commands:
-      - ls /usr/local/go/bin
-      - env
-      - /usr/local/go/bin/go version
+      - pwd
       - /usr/local/go/bin/go mod download
+      - ls /usr/local/go/bin/go
     env:
       PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
 
