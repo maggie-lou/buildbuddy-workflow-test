@@ -26,15 +26,10 @@ jobs:
       - name: Configure variables
         id: vars
         run: |
-          echo "Github ref is $GITHUB_REF"
-          echo "Event is ${{ github.event_name }}"
           # Configure repo based on pushed tag if set
           if [ ${{ github.event_name }} = 'push' ]; then
             ref="${GITHUB_REF}"
             tag=${GITHUB_REF/refs\/tags\//}
-            echo "In github if"
-            echo "Ref is $ref"
-            echo "Tag is $tag"
           else
             # Otherwise the workflow must have been manually triggered with inputs
             ref="${{ inputs.release_branch }}"
@@ -42,9 +37,6 @@ jobs:
           fi
           echo "ref=$ref" >> $GITHUB_OUTPUT
           echo "tag=$tag" >> $GITHUB_OUTPUT
-          echo "Setting output"
-          echo "Ref is $ref"
-          echo "Tag is $tag"
 
   create-release:
     runs-on: ubuntu-latest
@@ -54,36 +46,5 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.BUILDBUDDY_GITHUB_USER_TOKEN }}"
-          automatic_release_tag: ${{ needs.setup.outputs.tag }}
           prerelease: false
           draft: true
-
-  build:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release skip')"
-    needs: setup
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.setup.outputs.ref }}
-          # We need to fetch git tags to obtain the latest version tag to report
-          # the version of the running binary.
-          fetch-depth: 0
-
-      - name: Install bazelisk
-        run: |
-          curl -LO "https://github.com/bazelbuild/bazelisk/releases/download/v1.1.0/bazelisk-linux-amd64"
-          mkdir -p "${GITHUB_WORKSPACE}/bin/"
-          mv bazelisk-linux-amd64 "${GITHUB_WORKSPACE}/bin/bazel"
-          chmod +x "${GITHUB_WORKSPACE}/bin/bazel"
-
-      - name: Build and Upload Artifacts
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          "${GITHUB_WORKSPACE}/bin/bazel" build --config=release --remote_header=x-buildbuddy-api-key=${{ secrets.BUILDBUDDY_ORG_API_KEY }} //server/cmd/buildbuddy:buildbuddy //enterprise/server/cmd/server:buildbuddy //enterprise/server/cmd/executor:executor
-          cp bazel-bin/server/cmd/**/**/buildbuddy buildbuddy-linux-amd64
-          cp bazel-bin/enterprise/server/cmd/**/**/buildbuddy buildbuddy-enterprise-linux-amd64
-          cp bazel-bin/enterprise/server/cmd/**/**/executor executor-enterprise-linux-amd64
-          gh release upload ${{ needs.setup.outputs.tag }} buildbuddy-linux-amd64 buildbuddy-enterprise-linux-amd64 executor-enterprise-linux-amd64 --clobber
