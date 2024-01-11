@@ -28,9 +28,9 @@ jobs:
     runs-on: ubuntu-20.04-16cpu
     steps:
       - name: Print
-          run: |
-            echo ${{ inputs.release_branch }}
-            echo ${{ inputs.version_tag }}
+        run: |
+          echo ${{ inputs.release_branch }}
+          echo ${{ inputs.version_tag }}
 
       - name: Checkout
         uses: actions/checkout@v3
