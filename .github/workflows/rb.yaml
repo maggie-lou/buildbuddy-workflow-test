@@ -13,14 +13,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Download bb cli
         run: |
-          cli/install.sh
+          bazel build cli
+
+      - name: Setup git env
+        run: |
+          git checkout master
+          git checkout -
 
       - name: Test
         run: |
-          bb remote test //... \
+          $PWD/bazel-bin/cli/cmd/bb/bb_/bb --verbose=1 remote test //... \
             --config=linux-workflows --config=race \
+            --remote_executor=grpcs://buildbuddy.buildbuddy.io \
             --test_tag_filters=-performance,-webdriver,-docker,-bare \
             --remote_header=x-buildbuddy-api-key=${{ secrets.BUILDBUDDY_ORG_API_KEY }}

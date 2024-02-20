@@ -153,6 +153,7 @@ func determineRemote(repo *git.Repository) (*git.Remote, error) {
 }
 
 func determineDefaultBranch(repo *git.Repository) (string, error) {
+	log.Debugf("Maggie's debug log")
 	branches, err := repo.Branches()
 	if err != nil {
 		return "", status.UnknownErrorf("could not list branches: %s", err)
@@ -160,6 +161,7 @@ func determineDefaultBranch(repo *git.Repository) (string, error) {
 
 	allBranches := make(map[string]struct{})
 	err = branches.ForEach(func(branch *plumbing.Reference) error {
+		log.Debugf("Branch name %s", branch.Name())
 		allBranches[string(branch.Name())] = struct{}{}
 		return nil
 	})
@@ -537,6 +539,7 @@ func Run(ctx context.Context, opts RunOpts, repoConfig *RepoConfig) (int, error)
 		val := os.Getenv(envVar)
 		envVars[envVar] = val
 	}
+	fmt.Printf("Bazel args are %v", bazelArgs)
 
 	req := &rnpb.RunRequest{
 		GitRepo: &rnpb.RunRequest_GitRepo{
