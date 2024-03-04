@@ -29,7 +29,7 @@ Currently supported log types:
 
 var (
 	flags   = flag.NewFlagSet("print", flag.ContinueOnError)
-	grpcLog = flags.String("grpc_log", "", "gRPC log path.")
+	grpcLog = flags.String("grpc_log", "", "gRPC log path. Test.")
 )
 
 func HandlePrint(args []string) (int, error) {
