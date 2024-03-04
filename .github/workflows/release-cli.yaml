@@ -8,29 +8,8 @@ on:
       - "cli/**"
 
 jobs:
-  setup:
-    if: github.event.pull_request.merged == true
-    runs-on: ubuntu-20.04
-    outputs:
-      exit_early: ${{ steps.setup.outputs.EXIT_EARLY }}
-    steps:
-      - name: Checkout /buildbuddy
-        uses: actions/checkout@v3
-
-      - name: Validate setup conditions
-        id: setup
-        run: |
-          echo "HEAD_COMMIT_MESSAGE=$(git show -s)"
-          if [[ $HEAD_COMMIT_MESSAGE == *"release skip"* ]]; then
-            echo "EXIT_EARLY=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "EXIT_EARLY=false" >> "$GITHUB_OUTPUT"
-          fi
-          echo $HEAD_COMMIT_MESSAGE
-
   push-tag:
-    needs: setup
-    if: ${{ needs.setup.outputs.exit_early != 'true' }}
+    if: github.event.pull_request.merged == true && !contains(github.event.pull_request.body, 'release skip')
     runs-on: ubuntu-20.04
     outputs:
       version: ${{ steps.version.outputs.VERSION }}
@@ -43,7 +22,6 @@ jobs:
 
       - name: Push tag
         run: |
-          echo "${{ steps.setup.outputs.HEAD_COMMIT_MESSAGE }}"
           git config --local user.email "github-actions-release-bot@users.noreply.github.com"
           git config --local user.name "github-actions-release[bot]"
           ./cli/release.py --auto
