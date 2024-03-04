@@ -4,10 +4,12 @@ on:
   pull_request_target:
     types:
       - opened
+    paths:
+      - "cli/**"
 
 jobs:
   push-tag:
-    if: !contains(github.event.pull_request.body, 'release skip')
+    if: github.event.pull_request.merged == false && !contains(github.event.pull_request.body, 'release skip')
     runs-on: ubuntu-20.04
     outputs:
       version: ${{ steps.version.outputs.VERSION }}
