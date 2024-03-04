@@ -8,17 +8,14 @@ on:
       - "cli/**"
 
 jobs:
-  push-tag:
+  setup:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-20.04
     outputs:
-      version: ${{ steps.version.outputs.VERSION }}
+      exit_early: ${{ steps.setup.outputs.EXIT_EARLY }}
     steps:
       - name: Checkout /buildbuddy
         uses: actions/checkout@v3
-        with:
-          # We need to fetch git tags to obtain the latest cli version tag.
-          fetch-depth: 0
 
       - name: Validate setup conditions
         id: setup
@@ -31,8 +28,20 @@ jobs:
           fi
           echo $HEAD_COMMIT_MESSAGE
 
+  push-tag:
+    needs: setup
+    if: ${{ needs.setup.outputs.exit_early != 'true' }}
+    runs-on: ubuntu-20.04
+    outputs:
+      version: ${{ steps.version.outputs.VERSION }}
+    steps:
+      - name: Checkout /buildbuddy
+        uses: actions/checkout@v3
+        with:
+          # We need to fetch git tags to obtain the latest cli version tag.
+          fetch-depth: 0
+
       - name: Push tag
-        if: ${{ steps.commits.outputs.exit_early == 'false' }}
         run: |
           echo "${{ steps.setup.outputs.HEAD_COMMIT_MESSAGE }}"
           git config --local user.email "github-actions-release-bot@users.noreply.github.com"
