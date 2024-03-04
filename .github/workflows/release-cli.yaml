@@ -3,17 +3,20 @@ name: "release-cli"
 on:
   pull_request_target:
     types:
-      - closed
-    paths:
-      - "cli/**"
+      - opened
 
 jobs:
   push-tag:
-    if: github.event.pull_request.merged == true && !contains(github.event.pull_request.body, 'release skip')
+    if: !contains(github.event.pull_request.body, 'release skip')
     runs-on: ubuntu-20.04
     outputs:
       version: ${{ steps.version.outputs.VERSION }}
     steps:
+      - name: Setup
+        run: |
+          echo "BODY IS:"
+          echo ${{ github.event.pull_request.body }}
+
       - name: Checkout /buildbuddy
         uses: actions/checkout@v3
         with:
