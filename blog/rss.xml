@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>BuildBuddy Blog</title>
+        <link>https://www.buildbuddy.io/blog</link>
+        <description>BuildBuddy Blog</description>
+        <lastBuildDate>Mon, 08 Jan 2024 10:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[How Bazel 7.0 Makes Your Builds Faster]]></title>
+            <link>https://www.buildbuddy.io/blog/how-bazel-7-0-makes-your-builds-faster</link>
+            <guid>https://www.buildbuddy.io/blog/how-bazel-7-0-makes-your-builds-faster</guid>
+            <pubDate>Mon, 08 Jan 2024 10:00:00 GMT</pubDate>
+            <description><![CDATA[Highlighting changes in Bazel 7.0 that help BuildBuddy users build even faster!]]></description>
+            <category>bazel</category>
+        </item>
+        <item>
+            <title><![CDATA[What's New in Bazel 7.0]]></title>
+            <link>https://www.buildbuddy.io/blog/whats-new-in-bazel-7-0</link>
+            <guid>https://www.buildbuddy.io/blog/whats-new-in-bazel-7-0</guid>
+            <pubDate>Mon, 11 Dec 2023 03:30:00 GMT</pubDate>
+            <description><![CDATA[You know the drill 😁; We reviewed over 3,700 commits and summarized them, so you don't have to!]]></description>
+            <category>bazel</category>
+        </item>
+        <item>
+            <title><![CDATA[Lazily Pulling Container Images with Podman and SOCI Snapshotter]]></title>
+            <link>https://www.buildbuddy.io/blog/image-streaming</link>
+            <guid>https://www.buildbuddy.io/blog/image-streaming</guid>
+            <pubDate>Wed, 15 Nov 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[We’re excited to share how we're making "podman pull" ten times faster by lazily fetching container images using the SOCI Snapshotter.]]></description>
+            <category>product</category>
+            <category>engineering</category>
+            <category>performance</category>
+        </item>
+        <item>
+            <title><![CDATA[Bazelcon 2023 Recap]]></title>
+            <link>https://www.buildbuddy.io/blog/bazelcon-2023</link>
+            <guid>https://www.buildbuddy.io/blog/bazelcon-2023</guid>
+            <pubDate>Wed, 01 Nov 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[Another year, another Bazelcon! This year's edition was held in Munich, Germany, and featured two days of talks by Bazel maintainers, contributers, and users. Among the Bazel users represented as this year's conference were: Booking.com, RabbitMQ, Spotify, Stripe, Uber, and more.]]></description>
+            <category>bazelcon</category>
+            <category>company</category>
+        </item>
+        <item>
+            <title><![CDATA[BuildBuddy Named to Inaugural Redpoint InfraRed 100]]></title>
+            <link>https://www.buildbuddy.io/blog/redpoint-infrared-100</link>
+            <guid>https://www.buildbuddy.io/blog/redpoint-infrared-100</guid>
+            <pubDate>Tue, 18 Jul 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[New York City – July 18, 2023 – BuildBuddy, which provides an enterprise software for the Bazel ecosystem, announces its inclusion in the first edition of the Redpoint InfraRed 100, a comprehensive list of the next 100 promising private companies in Cloud Infrastructure. This curated selection of companies represents the next generation of leaders in the industry, poised to make a significant impact in the cloud infrastructure market.]]></description>
+            <category>company</category>
+        </item>
+        <item>
+            <title><![CDATA[PostgreSQL Support for BuildBuddy]]></title>
+            <link>https://www.buildbuddy.io/blog/postgres-support</link>
+            <guid>https://www.buildbuddy.io/blog/postgres-support</guid>
+            <pubDate>Wed, 21 Jun 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[We're happy to announce PostgreSQL support for BuildBuddy.]]></description>
+            <category>product</category>
+        </item>
+        <item>
+            <title><![CDATA[Providing Control Over Cache Encryption]]></title>
+            <link>https://www.buildbuddy.io/blog/customer-managed-encryption-keys</link>
+            <guid>https://www.buildbuddy.io/blog/customer-managed-encryption-keys</guid>
+            <pubDate>Mon, 05 Jun 2023 11:00:00 GMT</pubDate>
+            <description><![CDATA[We are announcing a feature that allows customers to control how their data is encrypted in in our cache.]]></description>
+            <category>product</category>
+            <category>security</category>
+            <category>encryption</category>
+            <category>enterprise</category>
+        </item>
+        <item>
+            <title><![CDATA[Buck2 Unboxing]]></title>
+            <link>https://www.buildbuddy.io/blog/buck2-review</link>
+            <guid>https://www.buildbuddy.io/blog/buck2-review</guid>
+            <pubDate>Tue, 30 May 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[A review of Meta's new build tool Buck2.]]></description>
+            <category>buck2</category>
+            <category>engineering</category>
+        </item>
+        <item>
+            <title><![CDATA[Keyboard Shortcuts in BuildBuddy]]></title>
+            <link>https://www.buildbuddy.io/blog/keyboard-shortcuts</link>
+            <guid>https://www.buildbuddy.io/blog/keyboard-shortcuts</guid>
+            <pubDate>Mon, 22 May 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[We're happy to announce keyboard shortcuts in BuildBuddy.]]></description>
+            <category>product</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcoming Grace Chuang]]></title>
+            <link>https://www.buildbuddy.io/blog/welcoming-grace-chuang</link>
+            <guid>https://www.buildbuddy.io/blog/welcoming-grace-chuang</guid>
+            <pubDate>Mon, 03 Apr 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[To fulfill our mission of bringing the world's best developer tools to every company, keeping our business running smoothly is as important as ensuring our customers' builds run smoothly. That's why we're excited to share that Grace Chuang is joining BuildBuddy!]]></description>
+            <category>company</category>
+            <category>team</category>
+        </item>
+        <item>
+            <title><![CDATA[Donating rules_xcodeproj to the Mobile Native Foundation]]></title>
+            <link>https://www.buildbuddy.io/blog/donating-rules_xcodeproj-to-the-mobile-native-foundation</link>
+            <guid>https://www.buildbuddy.io/blog/donating-rules_xcodeproj-to-the-mobile-native-foundation</guid>
+            <pubDate>Wed, 22 Mar 2023 09:00:00 GMT</pubDate>
+            <description><![CDATA[We are solidifying the community ownership of rules_xcodeproj by donating it to the Mobile Native Foundation.]]></description>
+            <category>rules_xcodeproj</category>
+        </item>
+        <item>
+            <title><![CDATA[Multiple Xcode Configurations with rules_xcodeproj 1.3]]></title>
+            <link>https://www.buildbuddy.io/blog/multiple-xcode-configurations-with-rules_xcodeproj-1-3</link>
+            <guid>https://www.buildbuddy.io/blog/multiple-xcode-configurations-with-rules_xcodeproj-1-3</guid>
+            <pubDate>Fri, 17 Mar 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[The one where we added a much requested, but surprisingly difficult to implement, feature.]]></description>
+            <category>rules_xcodeproj</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing rules_xcodeproj 1.0]]></title>
+            <link>https://www.buildbuddy.io/blog/introducing-rules_xcodeproj-1-0</link>
+            <guid>https://www.buildbuddy.io/blog/introducing-rules_xcodeproj-1-0</guid>
+            <pubDate>Mon, 06 Feb 2023 09:00:00 GMT</pubDate>
+            <description><![CDATA[How we got here and what’s next.]]></description>
+            <category>rules_xcodeproj</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcoming Son Luong Ngoc]]></title>
+            <link>https://www.buildbuddy.io/blog/welcoming-son-luong-ngoc</link>
+            <guid>https://www.buildbuddy.io/blog/welcoming-son-luong-ngoc</guid>
+            <pubDate>Tue, 10 Jan 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[At BuildBuddy, our mission is to bring the world's best developer tools to every company. A big part of that mission involves building a team folks with deep industry experience helping companies build and scale their systems.]]></description>
+            <category>company</category>
+            <category>team</category>
+        </item>
+        <item>
+            <title><![CDATA[What's New in Bazel 6.0]]></title>
+            <link>https://www.buildbuddy.io/blog/whats-new-in-bazel-6-0</link>
+            <guid>https://www.buildbuddy.io/blog/whats-new-in-bazel-6-0</guid>
+            <pubDate>Mon, 19 Dec 2022 09:00:00 GMT</pubDate>
+            <description><![CDATA[We reviewed over 3,100 commits and summarized them, again 😅, so you don't have to!]]></description>
+            <category>bazel</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcoming Jim Hollenbach]]></title>
+            <link>https://www.buildbuddy.io/blog/welcoming-jim-hollenbach</link>
+            <guid>https://www.buildbuddy.io/blog/welcoming-jim-hollenbach</guid>
+            <pubDate>Tue, 06 Dec 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[To fulfill our mission of bringing the world's best developer tools to every company, the most imporant thing we can do is hire incredible Software Engineers with experience building and scaling great software. That's why we're excited to share that Jim Hollenbach is joining BuildBuddy's engineering team!]]></description>
+            <category>company</category>
+            <category>team</category>
+        </item>
+        <item>
+            <title><![CDATA[Bazelcon 2022 Recap]]></title>
+            <link>https://www.buildbuddy.io/blog/bazelcon</link>
+            <guid>https://www.buildbuddy.io/blog/bazelcon</guid>
+            <pubDate>Tue, 29 Nov 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[Earlier this month we wrapped up the 2022 Bazelcon conference in New York City. The conference featured talks by many prominent Bazel users including Lyft, Spotify, Tesla, Slack, Stripe, Tinder, Tecton, Coinbase, Uber, more.]]></description>
+            <category>bazelcon</category>
+            <category>company</category>
+        </item>
+        <item>
+            <title><![CDATA[How We Use ClickHouse to Analyze Trends Across Millions of Builds]]></title>
+            <link>https://www.buildbuddy.io/blog/clickhouse-build-trends</link>
+            <guid>https://www.buildbuddy.io/blog/clickhouse-build-trends</guid>
+            <pubDate>Tue, 22 Nov 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[When you use Buildbuddy with Bazel to build and test software, Buildbuddy]]></description>
+            <category>product</category>
+            <category>engineering</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcoming Iain Macdonald]]></title>
+            <link>https://www.buildbuddy.io/blog/welcoming-iain-macdonald</link>
+            <guid>https://www.buildbuddy.io/blog/welcoming-iain-macdonald</guid>
+            <pubDate>Wed, 26 Oct 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[To fulfill our mission of bringing the world's best developer tools to every company, we're intensely focused on hiring outstanding Software Engineers. That's why we're excited to share today that Iain Macdonald is joining BuildBuddy's engineering team!]]></description>
+            <category>company</category>
+            <category>team</category>
+        </item>
+        <item>
+            <title><![CDATA[Welcoming Maggie Lou]]></title>
+            <link>https://www.buildbuddy.io/blog/welcoming-maggie-lou</link>
+            <guid>https://www.buildbuddy.io/blog/welcoming-maggie-lou</guid>
+            <pubDate>Mon, 11 Jul 2022 12:00:00 GMT</pubDate>
+            <description><![CDATA[To fulfill our mission of bringing the world's best developer tools to every company, we're expanding our team to keep up with our evergrowing customer base. That's why we're excited to share today that Maggie Lou is joining BuildBuddy's engineering team!]]></description>
+            <category>company</category>
+            <category>team</category>
+        </item>
+    </channel>
+</rss>
