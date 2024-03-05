@@ -91,7 +91,7 @@ func (c *CacheProxy) StartListening() error {
 	c.server = grpcServer
 
 	go func() {
-		log.Printf("Listening on %s", c.listenAddr)
+		log.Printf("Listening on %s, Test change", c.listenAddr)
 		if err := c.server.Serve(lis); err != nil {
 			log.Warningf("Error serving: %s", err)
 		}
