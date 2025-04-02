@@ -84,6 +84,7 @@ func LogGRPCRequest(ctx context.Context, fullMethod string, dur time.Duration, e
 	fullMethod = strings.Replace(fullMethod, "distributed_cache.DistributedCache/", "D", 1)
 	shortPath := "/" + path.Base(fullMethod)
 	CtxDebugf(ctx, "%s %s %s [%s]", "gRPC", shortPath, fmtErr(err), formatDuration(dur))
+	CtxDebugf(ctx, "Just a fake diff")
 	if *LogErrorStackTraces {
 		if se, ok := err.(interface {
 			StackTrace() status.StackTrace
