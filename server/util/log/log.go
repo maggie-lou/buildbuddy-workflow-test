@@ -38,6 +38,8 @@ const (
 	InvocationIDKey = "invocation_id"
 
 	callerSkipFrameCount = 3
+
+	Test = "hellooooo"
 )
 
 func formatDuration(dur time.Duration) string {
