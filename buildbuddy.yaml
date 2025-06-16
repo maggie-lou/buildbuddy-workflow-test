@@ -34,7 +34,9 @@ actions:
       - run //tools/checkstyle --config=linux-workflows
   - name: Maggie
     platform_properties:
-      remote-snapshot-save-policy: always
+      remote-snapshot-save-policy: none-available
+    env:
+      GIT_REPO_DEFAULT_BRANCH: "master"
     steps:
       - run: exit 0
   - name: Test (darwin_amd64)
