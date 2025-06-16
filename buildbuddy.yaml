@@ -32,6 +32,11 @@ actions:
           - "*"
     bazel_commands:
       - run //tools/checkstyle --config=linux-workflows
+  - name: Maggie
+    os: "darwin"
+    arch: "arm64"
+    steps:
+      - run: exit 0
   - name: Test (darwin_amd64)
     os: "darwin"
     triggers:
